@@ -1,13 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ListView
+} from 'react-native';
 
 export default class App extends React.Component {
+  constructor() {
+    super();
+    const ds = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1 !== r2,
+    });
+    this.state = {
+      dataSource: ds.cloneWithRows(['row1, row2']),
+    };
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <ListView
+          dataSource={this.state.dataSource}
+          renderRow={rowData => <Text>{rowData}</Text>}
+        />
       </View>
     );
   }
