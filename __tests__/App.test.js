@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow, mount, render } from 'enzyme';
 
@@ -13,5 +14,10 @@ describe('Main app', () => {
   test('render', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.exists()).toBe(true);
-  })
+  });
+
+  test('should be a View component', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.type()).toEqual(View);
+  });
 });
