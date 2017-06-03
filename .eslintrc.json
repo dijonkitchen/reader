@@ -5,5 +5,11 @@
         "jsx-a11y",
         "import",
         "jest"
-    ]
+    ],
+    "env": {
+      "jest": true
+    },
+    "globals": {
+      "fetch": false
+    }
 }
