@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, ListView } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow, mount, render } from 'enzyme';
 
@@ -21,5 +21,9 @@ describe('Main app', () => {
 
   test('should be a View component', () => {
     expect(wrapper.type()).toEqual(View);
+  });
+
+  test('should contain a ListView', () => {
+    expect(wrapper.find(ListView).length).toBeGreaterThan(0);
   });
 });
