@@ -23,7 +23,7 @@ describe('Main app', () => {
     expect(wrapper.type()).toEqual(View);
   });
 
-  test('should contain a ListView', () => {
-    expect(wrapper.find(ListView).length).toBeGreaterThan(0);
+  test('should contain only one ListView', () => {
+    expect(wrapper.find(ListView).length).toBe(1);
   });
 });
