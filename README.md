@@ -30,3 +30,7 @@ To test:
 ```sh
 yarn test
 ```
+
+## When
+
+A detailed roadmap of user stories is available in the [Projects](https://github.com/dijonkitchen/reader/projects/1?fullscreen=true).
