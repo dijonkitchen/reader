@@ -3,7 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
-  ListView
+  ListView,
 } from 'react-native';
 
 export default class App extends React.Component {
@@ -13,15 +13,15 @@ export default class App extends React.Component {
       rowHasChanged: (r1, r2) => r1 !== r2,
     });
     this.state = {
-      dataSource: ds.cloneWithRows(['row1, row2']),
+      stories: ds.cloneWithRows([]),
     };
   }
   render() {
     return (
       <View style={styles.container}>
         <ListView
-          dataSource={this.state.dataSource}
-          renderRow={rowData => <Text>{rowData}</Text>}
+          dataSource={this.state.stories}
+          renderRow={rowData => <Text>{rowData.title}</Text>}
         />
       </View>
     );
