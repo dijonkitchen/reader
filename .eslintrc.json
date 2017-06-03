@@ -8,5 +8,8 @@
     ],
     "env": {
       "jest": true
+    },
+    "globals": {
+      "fetch": false
     }
 }
