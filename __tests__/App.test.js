@@ -3,7 +3,9 @@ import renderer from 'react-test-renderer';
 
 import App from '../App';
 
-it('renders without crashing', () => {
-  const rendered = renderer.create(<App />);
-  expect(rendered).toBeTruthy();
+describe('Main app', () => {
+  it('renders without crashing', () => {
+    const rendered = renderer.create(<App />);
+    expect(rendered).toBeTruthy();
+  });
 });
