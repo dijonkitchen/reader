@@ -42,6 +42,7 @@ export default class Stories extends React.Component {
   render() {
     return (
       <ListView
+        style={styles.container}
         dataSource={this.state.stories}
         renderRow={(rowData) => {
           return (
@@ -54,4 +55,7 @@ export default class Stories extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    margin: 15,
+  },
 });
