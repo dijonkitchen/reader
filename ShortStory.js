@@ -6,9 +6,11 @@ import {
   Image,
 } from 'react-native';
 
+const placeholderImage = require('./images/placeholder.png');
+
 export default class ShortStory extends React.Component {
   render() {
-    let { data } = this.props;
+    const { data } = this.props;
     let title = '';
     let description = '';
     if (data) {
@@ -18,16 +20,39 @@ export default class ShortStory extends React.Component {
 
     return (
       <View>
-        <Image
-          styles={styles.thumbnails}
-          source={require('./images/placeholder.png')}
-        />
-        <Text>{title}</Text>
-        <Text>{description}</Text>
+        <View style={styles.container}>
+          <Image
+            style={styles.thumbnails}
+            source={placeholderImage}
+          />
+          <Text style={styles.title}>
+            {title}
+          </Text>
+        </View>
+        <Text style={styles.description}>
+          {description}
+        </Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  thumbnails: {
+    flex: 1,
+    height: 100,
+    width: 100,
+  },
+  title: {
+    flex: 2,
+    fontWeight: 'bold',
+    margin: 15,
+  },
+  description: {
+    margin: 5,
+  },
 });
