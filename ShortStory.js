@@ -13,7 +13,7 @@ export default class ShortStory extends React.Component {
     let description = '';
     if (data) {
       title = data.title;
-      description = data.description;
+      description = data.description.split('<')[0];
     }
 
     return (
