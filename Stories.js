@@ -7,6 +7,8 @@ import {
   Image,
 } from 'react-native';
 
+import ShortStory from './ShortStory';
+
 export default class Stories extends React.Component {
   constructor() {
     super();
@@ -43,14 +45,7 @@ export default class Stories extends React.Component {
         dataSource={this.state.stories}
         renderRow={(rowData) => {
           return (
-            <View>
-              <Image
-                styles={styles.thumbnails}
-                source={require('./images/placeholder.png')}
-              />
-              <Text>{rowData.title}</Text>
-              <Text>{rowData.description}</Text>
-            </View>
+            <ShortStory data={rowData} />
           );
         }}
       />
