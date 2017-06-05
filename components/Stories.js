@@ -1,10 +1,7 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
-  View,
   ListView,
-  Image,
 } from 'react-native';
 
 import ShortStory from './ShortStory';
@@ -29,7 +26,7 @@ export default class Stories extends React.Component {
       .then(response => response.json())
       .then((responseJson) => {
         const mostRead = responseJson.query.results.item;
-        console.log(mostRead[0])
+        // console.log(mostRead[0])
         this.setState({
           stories: this.state.stories.cloneWithRows(mostRead),
         });
@@ -46,13 +43,20 @@ export default class Stories extends React.Component {
         dataSource={this.state.stories}
         renderRow={(rowData) => {
           return (
-            <ShortStory data={rowData} />
+            <ShortStory
+              data={rowData}
+              navigation={this.props.navigation}
+            />
           );
         }}
       />
     );
   }
 }
+
+Stories.navigationOptions = {
+  title: 'Stories',
+};
 
 const styles = StyleSheet.create({
   container: {

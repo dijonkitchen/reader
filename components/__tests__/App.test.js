@@ -3,8 +3,8 @@ import { View } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow, mount, render } from 'enzyme';
 
-import App from '../App';
-import Stories from '../Stories';
+import App from '../../App';
+import MainScreenNavigator from '../MainScreenNavigator';
 
 describe('Main app', () => {
   beforeEach(() => {
@@ -24,7 +24,7 @@ describe('Main app', () => {
     expect(wrapper.type()).toEqual(View);
   });
 
-  test('should contain only one Stories component', () => {
-    expect(wrapper.find(Stories).length).toBe(1);
+  test('should contain only one MainScreenNavigator component', () => {
+    expect(wrapper.find(MainScreenNavigator).length).toBe(1);
   });
 });

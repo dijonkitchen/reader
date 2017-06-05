@@ -1,20 +1,25 @@
 import React from 'react';
-import { Image, View, Text } from 'react-native';
+import {
+  Image,
+  View,
+  Text,
+  TouchableHighlight,
+} from 'react-native';
 import { shallow, mount, render } from 'enzyme';
 
 import ShortStory from '../ShortStory';
 
 describe('ShortStory component', () => {
   beforeEach(() => {
-    wrapper = shallow(<ShortStory />);
+    wrapper = shallow(<ShortStory navigation={() => 'test'} />);
   });
 
   test('render', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  test('should be a View component', () => {
-    expect(wrapper.type()).toEqual(View);
+  test('should be a certain component', () => {
+    expect(wrapper.type()).toEqual(TouchableHighlight);
   });
 
   test('should be contain a Image component', () => {

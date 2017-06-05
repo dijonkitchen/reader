@@ -2,15 +2,16 @@ import React from 'react';
 import {
   StyleSheet,
   View,
+  Dimensions,
 } from 'react-native';
 
-import Stories from './Stories';
+import MainScreenNavigator from './components/MainScreenNavigator';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Stories />
+        <MainScreenNavigator style={styles.nav}/>
       </View>
     );
   }
@@ -22,5 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  nav: {
+    width: Dimensions.get('window').width,
   },
 });
