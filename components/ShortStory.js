@@ -4,12 +4,14 @@ import {
   Text,
   View,
   Image,
+  TouchableHighlight,
 } from 'react-native';
 
 const placeholderImage = require('../images/placeholder.png');
 
 export default class ShortStory extends React.Component {
   render() {
+    const { navigate } = this.props.navigation;
     const { data } = this.props;
     let title = '';
     let description = '';
@@ -19,23 +21,31 @@ export default class ShortStory extends React.Component {
     }
 
     return (
-      <View>
-        <View style={styles.container}>
-          <Image
-            style={styles.thumbnails}
-            source={placeholderImage}
-          />
-          <Text style={styles.title}>
-            {title}
+      <TouchableHighlight
+        onPress={() => navigate('Story')}
+      >
+        <View>
+          <View style={styles.container}>
+            <Image
+              style={styles.thumbnails}
+              source={placeholderImage}
+            />
+            <Text style={styles.title}>
+              {title}
+            </Text>
+          </View>
+          <Text style={styles.description}>
+            {description}
           </Text>
         </View>
-        <Text style={styles.description}>
-          {description}
-        </Text>
-      </View>
+      </TouchableHighlight>
     );
   }
 }
+
+ShortStory.navigationOptions = {
+  title: 'ShortStory',
+};
 
 const styles = StyleSheet.create({
   container: {
