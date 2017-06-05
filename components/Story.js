@@ -3,15 +3,39 @@ import {
   StyleSheet,
   WebView,
 } from 'react-native';
+import HTMLView from 'react-native-htmlview';
 
 export default class Story extends React.Component {
-  render() {
-    let uri = this.props.navigation.state.params.data.origLink;
+  constructor() {
+    super();
+    this.state = {
+      html: `
+          <body>
+            <p>
+              Loading!
+            </p>
+          </body>
+      `,
+    };
+  }
 
+  componentDidMount () {
+    let uri = this.props.navigation.state.params.data.origLink;
+    this.setHTML(uri)
+  }
+
+  setHTML(uri) {
+    fetch(uri)
+      .then(response => response.text())
+      .then(html => {
+        this.setState({ html })
+      });
+  }
+
+  render() {
     return (
-      <WebView
-        source={{ uri }}
-        startInLoadingState
+      <HTMLView
+        value={this.state.html}
       />
     );
   }
