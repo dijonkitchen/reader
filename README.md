@@ -36,6 +36,18 @@ To test:
 yarn test
 ```
 
+If you want to build the project "normally" with the [react-native-cli](https://facebook.github.io/react-native/docs/running-on-simulator-ios.html),
+you can switch to the [ejected](https://github.com/dijonkitchen/reader/tree/ejected) branch.
+
+With that branch, testing is the same command, but running it on iOS
+would be:
+```sh
+yarn install
+react-native run-ios
+```
+
+You can use Xcode if you like too!
+
 ## When
 
 A detailed roadmap of user stories is available in the [Projects](https://github.com/dijonkitchen/reader/projects/1?fullscreen=true).
