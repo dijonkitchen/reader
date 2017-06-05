@@ -11,6 +11,7 @@ export default class Story extends React.Component {
     return (
       <WebView
         source={{ uri }}
+        startInLoadingState
       />
     );
   }
