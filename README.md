@@ -11,10 +11,12 @@ A simple iOS app for reading RSS feeds
 
 Test out a few things:
 
-* create-react-native-app
-* Expo
-* JS TDD with Jest
-* YQL
+* [Create React Native App](https://github.com/react-community/create-react-native-app)
+* [Expo](https://expo.io/)
+* ES2015+ Test-Driven Development with:
+    - [Jest](https://facebook.github.io/jest/)
+    - [Enzyme](http://airbnb.io/enzyme/)
+* [Yahoo Query Language](https://developer.yahoo.com/yql/)
 
 ## How
 
