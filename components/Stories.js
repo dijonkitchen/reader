@@ -59,6 +59,7 @@ export default class Stories extends React.Component {
   render() {
     return (
       <ListView
+        enableEmptySections
         dataSource={this.state.stories}
         renderRow={(rowData) => {
           return (
