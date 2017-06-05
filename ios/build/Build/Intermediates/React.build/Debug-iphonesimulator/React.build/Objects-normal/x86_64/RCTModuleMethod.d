@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTModuleMethod.m \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTModuleMethod.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTBridgeMethod.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTNullability.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/jonchen/Documents/reader/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/jonchen/Documents/reader/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/jonchen/Documents/reader/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Base/RCTParserUtils.h \
+  /Users/jonchen/Documents/reader/node_modules/react-native/React/Profiler/RCTProfile.h

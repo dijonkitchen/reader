@@ -14,22 +14,18 @@
     "jest-expo": "^1.0.2",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
-    "react-native-scripts": "0.0.30",
     "react-test-renderer": "16.0.0-alpha.6"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "test": "node node_modules/jest/bin/jest.js --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.0",
     "react-navigation": "^1.0.0-beta.11"
