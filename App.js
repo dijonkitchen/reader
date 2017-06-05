@@ -4,9 +4,8 @@ import {
   View,
   Dimensions,
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
 
-import MainScreenNavigator from './MainScreenNavigator';
+import MainScreenNavigator from './components/MainScreenNavigator';
 
 export default class App extends React.Component {
   render() {

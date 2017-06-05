@@ -3,7 +3,6 @@ import { View } from 'react-native';
 import { shallow, mount, render } from 'enzyme';
 
 import MainScreenNavigator from '../MainScreenNavigator';
-import Stories from '../Stories';
 
 describe('MainScreenNavigator component', () => {
   beforeEach(() => {

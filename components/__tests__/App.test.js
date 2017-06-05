@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import renderer from 'react-test-renderer';
 import { shallow, mount, render } from 'enzyme';
 
-import App from '../App';
+import App from '../../App';
 import MainScreenNavigator from '../MainScreenNavigator';
 
 describe('Main app', () => {

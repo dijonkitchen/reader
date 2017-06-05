@@ -6,7 +6,7 @@ import {
   Image,
 } from 'react-native';
 
-const placeholderImage = require('./images/placeholder.png');
+const placeholderImage = require('../images/placeholder.png');
 
 export default class ShortStory extends React.Component {
   render() {
