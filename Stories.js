@@ -1,10 +1,7 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
-  View,
   ListView,
-  Image,
 } from 'react-native';
 
 import ShortStory from './ShortStory';
@@ -53,6 +50,10 @@ export default class Stories extends React.Component {
     );
   }
 }
+
+Stories.navigationOptions = {
+  title: 'Stories',
+};
 
 const styles = StyleSheet.create({
   container: {
