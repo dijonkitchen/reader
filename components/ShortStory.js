@@ -24,7 +24,7 @@ export default class ShortStory extends React.Component {
       <TouchableHighlight
         onPress={() => navigate('Story', { data })}
       >
-        <View>
+        <View style={styles.whiteBg}>
           <View style={styles.container}>
             <Image
               style={styles.thumbnails}
@@ -48,6 +48,9 @@ ShortStory.navigationOptions = {
 };
 
 const styles = StyleSheet.create({
+  whiteBg: {
+    backgroundColor: 'white',
+  },
   container: {
     flex: 1,
     flexDirection: 'row',

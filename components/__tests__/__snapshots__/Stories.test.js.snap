@@ -7,14 +7,17 @@ exports[`Stories component renders correctly 1`] = `
       "items": 0,
     }
   }
+  enableEmptySections={true}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[Function]}
+      refreshing={false}
+    />
+  }
   renderRow={[Function]}
   renderScrollComponent={[Function]}
-  style={
-    Object {
-      "margin": 15,
-    }
-  }
 >
+  <RCTRefreshControl />
   <View />
 </RCTScrollView>
 `;

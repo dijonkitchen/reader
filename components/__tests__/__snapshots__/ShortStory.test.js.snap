@@ -27,7 +27,13 @@ exports[`ShortStory component renders correctly 1`] = `
   testID={undefined}
   tvParallaxProperties={undefined}
 >
-  <View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "white",
+      }
+    }
+  >
     <View
       style={
         Object {
