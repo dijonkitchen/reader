@@ -1,13 +1,13 @@
 import { StackNavigator } from 'react-navigation';
 
 import Stories from './Stories';
-import ShortStory from './ShortStory';
+import Story from './Story';
 
 export default MainScreenNavigator = StackNavigator({
   Home: {
     screen: Stories,
   },
   Story: {
-    screen: ShortStory,
+    screen: Story,
   },
 });
