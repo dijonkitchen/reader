@@ -6,13 +6,7 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import Stories from './Stories';
-
-const MainScreenNavigator = StackNavigator({
-  Home: {
-    screen: Stories,
-  },
-});
+import MainScreenNavigator from './MainScreenNavigator';
 
 export default class App extends React.Component {
   render() {
