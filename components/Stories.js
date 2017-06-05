@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  StyleSheet,
   ListView,
   AsyncStorage,
+  RefreshControl,
 } from 'react-native';
 
 import ShortStory from './ShortStory';
@@ -15,6 +15,7 @@ export default class Stories extends React.Component {
     });
     this.state = {
       stories: ds.cloneWithRows([]),
+      refreshing: false,
     };
   }
 
@@ -56,6 +57,13 @@ export default class Stories extends React.Component {
     }
   }
 
+  _onRefresh() {
+    this.setState({ refreshing: true });
+    this.queryFeed().then(() => {
+      this.setState({ refreshing: false });
+    });
+  }
+
   render() {
     return (
       <ListView
@@ -69,6 +77,12 @@ export default class Stories extends React.Component {
             />
           );
         }}
+        refreshControl={
+          <RefreshControl
+            refreshing={this.state.refreshing}
+            onRefresh={this._onRefresh.bind(this)}
+          />
+        }
       />
     );
   }
