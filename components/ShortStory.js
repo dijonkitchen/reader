@@ -22,7 +22,7 @@ export default class ShortStory extends React.Component {
 
     return (
       <TouchableHighlight
-        onPress={() => navigate('Story')}
+        onPress={() => navigate('Story', { data })}
       >
         <View>
           <View style={styles.container}>
