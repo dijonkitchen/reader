@@ -1,23 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stories component renders correctly 1`] = `
-<RCTScrollView
-  dataSource={
-    ListViewDataSource {
-      "items": 0,
+<View>
+  <TextInput
+    defaultValue="http://feeds.reuters.com/reuters/topNews"
+    keyboardType="url"
+    onSubmitEditing={[Function]}
+    placeholder="Paste a RSS feed here and search!"
+    returnKeyType="search"
+    style={
+      Object {
+        "height": 40,
+      }
     }
-  }
-  enableEmptySections={true}
-  refreshControl={
-    <RefreshControlMock
-      onRefresh={[Function]}
-      refreshing={false}
-    />
-  }
-  renderRow={[Function]}
-  renderScrollComponent={[Function]}
->
-  <RCTRefreshControl />
-  <View />
-</RCTScrollView>
+  />
+  <RCTScrollView
+    dataSource={
+      ListViewDataSource {
+        "items": 0,
+      }
+    }
+    enableEmptySections={true}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+    renderRow={[Function]}
+    renderScrollComponent={[Function]}
+  >
+    <RCTRefreshControl />
+    <View />
+  </RCTScrollView>
+</View>
 `;
