@@ -35,7 +35,13 @@ export default class Stories extends React.Component {
       console.error(error);
     }
 
-    fetch("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D'http%3A%2F%2Ffeeds.reuters.com%2Freuters%2FMostRead'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+    const yql = 'https://query.yahooapis.com/v1/public/yql';
+    const query = '?q=select%20*%20from%20rss%20where%20url%3D';
+    const feed = "'http://feeds.reuters.com/reuters/topNews'";
+    const options = '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+    const fetchURL = yql + query + feed + options;
+
+    fetch(fetchURL)
       .then(response => response.json())
       .then((responseJson) => {
         const mostRead = responseJson.query.results.item;
