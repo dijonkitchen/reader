@@ -14,8 +14,8 @@ describe('Stories component', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  test('should be a ListView component', () => {
-    expect(wrapper.type()).toEqual(ListView);
+  test('should be a certain component', () => {
+    expect(wrapper.type()).toEqual(View);
   });
 
   test('renders correctly', () => {
