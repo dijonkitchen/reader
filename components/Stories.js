@@ -16,6 +16,7 @@ export default class Stories extends React.Component {
     this.state = {
       stories: ds.cloneWithRows([]),
       refreshing: false,
+      feed: 'http://feeds.reuters.com/reuters/topNews',
     };
   }
 
@@ -37,7 +38,7 @@ export default class Stories extends React.Component {
 
     const yql = 'https://query.yahooapis.com/v1/public/yql';
     const query = '?q=select%20*%20from%20rss%20where%20url%3D';
-    const feed = "'http://feeds.reuters.com/reuters/topNews'";
+    const feed = `'${this.state.feed}'`;
     const options = '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
     const fetchURL = yql + query + feed + options;
 
