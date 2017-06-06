@@ -3,6 +3,8 @@ import {
   ListView,
   AsyncStorage,
   RefreshControl,
+  View,
+  TextInput,
 } from 'react-native';
 
 import ShortStory from './ShortStory';
@@ -73,24 +75,39 @@ export default class Stories extends React.Component {
 
   render() {
     return (
-      <ListView
-        enableEmptySections
-        dataSource={this.state.stories}
-        renderRow={(rowData) => {
-          return (
-            <ShortStory
-              data={rowData}
-              navigation={this.props.navigation}
+      <View>
+        <TextInput
+          keyboardType='url'
+          style={{ height: 40 }}
+          placeholder="Paste a RSS feed here and search!"
+          defaultValue="http://feeds.reuters.com/reuters/topNews"
+          onSubmitEditing={(event) => {
+            this.setState(
+              { feed: event.nativeEvent.text },
+              this.queryFeed
+            );
+          }}
+          returnKeyType="search"
+        />
+        <ListView
+          enableEmptySections
+          dataSource={this.state.stories}
+          renderRow={(rowData) => {
+            return (
+              <ShortStory
+                data={rowData}
+                navigation={this.props.navigation}
+              />
+            );
+          }}
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh.bind(this)}
             />
-          );
-        }}
-        refreshControl={
-          <RefreshControl
-            refreshing={this.state.refreshing}
-            onRefresh={this._onRefresh.bind(this)}
-          />
-        }
-      />
+          }
+        />
+      </View>
     );
   }
 }
