@@ -83,7 +83,7 @@ export default class Stories extends React.Component {
           defaultValue="http://feeds.reuters.com/reuters/topNews"
           onSubmitEditing={(event) => {
             this.setState(
-              { feed: event.nativeEvent.text },
+              { feed: event.nativeEvent.text.trim() },
               this.queryFeed
             );
           }}
