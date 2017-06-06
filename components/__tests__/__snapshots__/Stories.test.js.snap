@@ -8,9 +8,11 @@ exports[`Stories component renders correctly 1`] = `
     onSubmitEditing={[Function]}
     placeholder="Paste a RSS feed here and search!"
     returnKeyType="search"
+    selectTextOnFocus={true}
     style={
       Object {
-        "height": 40,
+        "height": 30,
+        "padding": 5,
       }
     }
   />
