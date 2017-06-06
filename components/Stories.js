@@ -78,7 +78,7 @@ export default class Stories extends React.Component {
       <View>
         <TextInput
           keyboardType='url'
-          style={{ height: 40 }}
+          style={{ height: 30, padding: 5 }}
           placeholder="Paste a RSS feed here and search!"
           defaultValue="http://feeds.reuters.com/reuters/topNews"
           onSubmitEditing={(event) => {
