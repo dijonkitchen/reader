@@ -3,6 +3,9 @@ import {
   ListView,
   AsyncStorage,
   RefreshControl,
+  View,
+  TextInput,
+  StyleSheet,
 } from 'react-native';
 
 import ShortStory from './ShortStory';
@@ -16,6 +19,7 @@ export default class Stories extends React.Component {
     this.state = {
       stories: ds.cloneWithRows([]),
       refreshing: false,
+      feed: 'http://feeds.reuters.com/reuters/topNews',
     };
   }
 
@@ -35,7 +39,13 @@ export default class Stories extends React.Component {
       console.error(error);
     }
 
-    fetch("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D'http%3A%2F%2Ffeeds.reuters.com%2Freuters%2FMostRead'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
+    const yql = 'https://query.yahooapis.com/v1/public/yql';
+    const query = '?q=select%20*%20from%20rss%20where%20url%3D';
+    const feed = `'${this.state.feed}'`;
+    const options = '&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
+    const fetchURL = yql + query + feed + options;
+
+    fetch(fetchURL)
       .then(response => response.json())
       .then((responseJson) => {
         const mostRead = responseJson.query.results.item;
@@ -66,24 +76,40 @@ export default class Stories extends React.Component {
 
   render() {
     return (
-      <ListView
-        enableEmptySections
-        dataSource={this.state.stories}
-        renderRow={(rowData) => {
-          return (
-            <ShortStory
-              data={rowData}
-              navigation={this.props.navigation}
+      <View style={styles.container}>
+        <TextInput
+          keyboardType='url'
+          style={{ height: 30, padding: 5 }}
+          placeholder="Paste a RSS feed here and search!"
+          defaultValue="http://feeds.reuters.com/reuters/topNews"
+          selectTextOnFocus
+          onSubmitEditing={(event) => {
+            this.setState(
+              { feed: event.nativeEvent.text.trim() },
+              this.queryFeed
+            );
+          }}
+          returnKeyType="search"
+        />
+        <ListView
+          enableEmptySections
+          dataSource={this.state.stories}
+          renderRow={(rowData) => {
+            return (
+              <ShortStory
+                data={rowData}
+                navigation={this.props.navigation}
+              />
+            );
+          }}
+          refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh.bind(this)}
             />
-          );
-        }}
-        refreshControl={
-          <RefreshControl
-            refreshing={this.state.refreshing}
-            onRefresh={this._onRefresh.bind(this)}
-          />
-        }
-      />
+          }
+        />
+      </View>
     );
   }
 }
@@ -91,3 +117,9 @@ export default class Stories extends React.Component {
 Stories.navigationOptions = {
   title: 'Stories',
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
