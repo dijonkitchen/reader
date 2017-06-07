@@ -5,6 +5,7 @@ import {
   RefreshControl,
   View,
   TextInput,
+  StyleSheet,
 } from 'react-native';
 
 import ShortStory from './ShortStory';
@@ -75,7 +76,7 @@ export default class Stories extends React.Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <TextInput
           keyboardType='url'
           style={{ height: 30, padding: 5 }}
@@ -116,3 +117,9 @@ export default class Stories extends React.Component {
 Stories.navigationOptions = {
   title: 'Stories',
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
