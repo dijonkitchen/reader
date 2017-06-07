@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stories component renders correctly 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <TextInput
     defaultValue="http://feeds.reuters.com/reuters/topNews"
     keyboardType="url"
