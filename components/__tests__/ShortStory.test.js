@@ -1,16 +1,20 @@
 import React from 'react';
 import {
   Image,
-  View,
   Text,
   TouchableHighlight,
 } from 'react-native';
+
 import renderer from 'react-test-renderer';
-import { shallow, mount, render } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import ShortStory from '../ShortStory';
 
+Enzyme.configure({ adapter: new Adapter() });
+
 describe('ShortStory component', () => {
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(<ShortStory navigation={() => 'test'} />);
   });

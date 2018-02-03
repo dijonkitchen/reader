@@ -9,6 +9,7 @@ exports[`Stories component renders correctly 1`] = `
   }
 >
   <TextInput
+    allowFontScaling={true}
     defaultValue="http://feeds.reuters.com/reuters/topNews"
     keyboardType="url"
     onSubmitEditing={[Function]}

@@ -1,12 +1,17 @@
 import React from 'react';
 import { View } from 'react-native';
+
 import renderer from 'react-test-renderer';
-import { shallow, mount, render } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import App from '../../App';
 import MainScreenNavigator from '../MainScreenNavigator';
 
+Enzyme.configure({ adapter: new Adapter() });
+
 describe('Main app', () => {
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(<App />);
   });
