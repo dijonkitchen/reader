@@ -6,18 +6,16 @@ import {
 
 import MainScreenNavigator from './components/MainScreenNavigator';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <MainScreenNavigator />
-      </View>
-    );
-  }
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   }
 });
+
+const App = () => (
+  <View style={styles.container}>
+    <MainScreenNavigator />
+  </View>
+)
+
+export default App
