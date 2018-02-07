@@ -1,8 +1,7 @@
 import React from 'react';
 import {
   StyleSheet,
-  View,
-  Dimensions,
+  View
 } from 'react-native';
 
 import MainScreenNavigator from './components/MainScreenNavigator';
