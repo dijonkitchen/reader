@@ -31,6 +31,8 @@ yarn install
 yarn start
 ```
 
+Then run Expo XDE or follow the instructions in the terminal!
+
 To test:
 ```sh
 yarn test
