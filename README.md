@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/dijonkitchen/reader.svg?style=svg)](https://circleci.com/gh/dijonkitchen/reader)
 [![Build Status](https://travis-ci.org/dijonkitchen/reader.svg?branch=master)](https://travis-ci.org/dijonkitchen/reader)
 [![Coverage Status](https://coveralls.io/repos/github/dijonkitchen/reader/badge.svg)](https://coveralls.io/github/dijonkitchen/reader)
 
