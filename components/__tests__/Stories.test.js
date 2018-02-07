@@ -4,12 +4,17 @@ import {
   View,
   TextInput,
 } from 'react-native';
+
 import renderer from 'react-test-renderer';
-import { shallow, mount, render } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import Stories from '../Stories';
 
+Enzyme.configure({ adapter: new Adapter() });
+
 describe('Stories component', () => {
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(<Stories />);
   });
