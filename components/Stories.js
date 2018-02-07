@@ -67,7 +67,7 @@ export default class Stories extends React.Component {
     }
   }
 
-  _onRefresh() {
+  handleOnRefresh = () => {
     this.setState({ refreshing: true });
     this.queryFeed().then(() => {
       this.setState({ refreshing: false });
@@ -105,7 +105,7 @@ export default class Stories extends React.Component {
           refreshControl={
             <RefreshControl
               refreshing={this.state.refreshing}
-              onRefresh={this._onRefresh.bind(this)}
+              onRefresh={this.handleOnRefresh}
             />
           }
         />
