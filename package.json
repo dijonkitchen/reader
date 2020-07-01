@@ -11,7 +11,7 @@
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jest": "^21.7.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-react": "^7.20.3",
     "jest-expo": "^25.0.0",
     "react-dom": "^16.13.0",
     "react-native-scripts": "2.0.1",
