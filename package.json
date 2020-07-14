@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "enzyme": "^3.3.0",
+    "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.1.1",
